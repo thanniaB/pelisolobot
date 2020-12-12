@@ -1,0 +1,16 @@
+{
+  "name": "pelisolobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thannia",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "firstline": "^2.0.2",
+    "telegraf": "^3.38.0"
+  }
+}
