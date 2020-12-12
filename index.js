@@ -44,7 +44,7 @@ stage.register(clearall);
 const bot = new Telegraf(process.env.BOT_TOKEN);
 const instrucciones = `Soy el Pelisolobot y voy a manejar tu lista de películas
  \nEscribe '/addmovie' para agregar a la lista
- \nEscribe '/removemovie'/removemovie para quitar de la lista
+ \nEscribe '/removemovie' para quitar de la lista
  \nEscribe '/viewall' para ver toda la lista
  \nEscribe '/clearall' para borrar toda la lista
  \nEscribe 'cual sigue?' para ver tu siguiente película en la lista
@@ -58,7 +58,7 @@ bot.command('clearall', (ctx) => ctx.scene.enter('clearall'));
 bot.command('viewall', (ctx) => displayAllMovies(ctx));
 bot.startPolling();
 bot.start((ctx) => ctx.reply(instrucciones));
-bot.on('text', (ctx) => ctx.reply(`No entendí qué dijiste... \n ${instrucciones}`));
+bot.on('text', (ctx) => ctx.reply(`No entendí qué dijiste... \n${instrucciones}`));
 bot.on('sticker', (ctx) => ctx.reply('Gran sticker amix'));
 bot.hears('pideme perdon', (ctx) => ctx.reply('Perdón :('));
 bot.hears('pídeme perdón', (ctx) => ctx.reply('Perdón :('));
